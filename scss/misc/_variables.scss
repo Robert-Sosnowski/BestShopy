@@ -5,17 +5,17 @@ $pageBackground: #e4e4e4;
 $textColor: #444444;
 $primaryColor: #08A6E4;
 $secondaryColor: #1691c3;
-$primaryShadowColor:rgba(7, 172, 230, .16);
+$primaryShadowColor: rgba(7, 172, 230, .16);
 $colorRedish: #FB3B64;
-$colorGreen:#55DFB4;
-$colorBlack:#000000;
-$colorGray:#A5A5A5;
+$colorGreen: #55DFB4;
+$colorBlack: #000000;
+$colorGray: #A5A5A5;
 $colorLightGray: #F7F7F7;
-$colorWhite:#FFFFFF;
+$colorWhite: #FFFFFF;
 /**
  * Grid variables
  */
-$containerWidth: 1140px;
+$containerWidth: 1352px;
 $columns: 12;
 $gutter: 15px;
 
@@ -23,3 +23,10 @@ $gutter: 15px;
  * Design variables
  */
 $borderRadius: 0.3125rem;
+$btnRadius:35px;
+
+/**
+* Font variables
+ */
+$fontRaleway:"Raleway", sans-serif;
+$fontOpenSans: "Open-Sans", sans-serif;

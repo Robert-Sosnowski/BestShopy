@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: $fontOpenSans;
+}
+a{
+  text-decoration: none;
+}
+h2{
+  font-family: $fontRaleway;
+}
+.container{
+  width: 1352px;
+  margin:0 auto;
+  @include xl{
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+.logo{
+  font-family: $fontRaleway;
+  font-size: 2rem;
+  font-weight: 300;
+  color:$primaryColor;
+}

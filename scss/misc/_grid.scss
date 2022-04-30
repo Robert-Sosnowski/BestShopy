@@ -1,10 +1,5 @@
 @use "sass:math";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 // xs - max-width: 575px,
 // sm - min-width: 576px,
@@ -12,75 +7,18 @@
 // lg - min-width: 992px,
 // xl - min-width: 1200px,
 // hd - min-width: 1600px.
-
-[class*="col"] {
-  width: 100%;
+@mixin sm{
+  @media (min-width: 576px){
+    @content
+  }
 }
-
-.container {
-  max-width: $containerWidth;
-  margin: 0 auto;
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-
-    @for $i from 1 through $columns {
-      .col-#{$i} {
-        width: math.div(100%, $columns) * $i;
-        min-height: 1px;
-        padding: 0 math.div($gutter, 2);
-      }
-    }
-
-    @for $i from 1 through $columns {
-      .col-sm-#{$i} {
-        @media screen and (min-width: 576px) {
-          width: math.div(100%, $columns) * $i;
-          min-height: 1px;
-          padding: 0 math.div($gutter, 2);
-        }
-      }
-    }
-
-    @for $i from 1 through $columns {
-      .col-sm-#{$i} {
-        @media screen and (min-width: 576px) {
-          width: math.div(100%, $columns) * $i;
-          min-height: 1px;
-          padding: 0 math.div($gutter, 2);
-        }
-      }
-    }
-
-    @for $i from 1 through $columns {
-      .col-md-#{$i} {
-        @media screen and (min-width: 768px) {
-          width: math.div(100%, $columns) * $i;
-          min-height: 1px;
-          padding: 0 math.div($gutter, 2);
-        }
-      }
-    }
-
-    @for $i from 1 through $columns {
-      .col-lg-#{$i} {
-        @media screen and (min-width: 992px) {
-          width: math.div(100%, $columns) * $i;
-          min-height: 1px;
-          padding: 0 math.div($gutter, 2);
-        }
-      }
-    }
-
-    @for $i from 1 through $columns {
-      .col-xl-#{$i} {
-        @media screen and (min-width: 1200px) {
-          width: math.div(100%, $columns) * $i;
-          min-height: 1px;
-          padding: 0 math.div($gutter, 2);
-        }
-      }
-    }
+@mixin lg{
+  @media (min-width: 992px){
+    @content
+  }
+}
+@mixin xl{
+  @media (min-width: 1200px){
+    @content
   }
 }
