@@ -1,3 +1,6 @@
+@import "misc/variables";
+@import "misc/grid";
+@import "misc/reset";
 @import "general/base";
 @import "blocks/header";
 @import "blocks/opening";
@@ -5,6 +8,5 @@
 @import "blocks/logo";
 @import "elements/buttons";
 @import "general/global";
-@import "misc/grid";
-@import "misc/reset";
-@import "misc/variables";
+
+

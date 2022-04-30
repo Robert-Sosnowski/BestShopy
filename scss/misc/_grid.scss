@@ -7,17 +7,17 @@
 // lg - min-width: 992px,
 // xl - min-width: 1200px,
 // hd - min-width: 1600px.
-@mixin sm{
+@mixin sm(){
   @media (min-width: 576px){
     @content
   }
 }
-@mixin lg{
+@mixin lg(){
   @media (min-width: 992px){
     @content
   }
 }
-@mixin xl{
+@mixin xl(){
   @media (min-width: 1200px){
     @content
   }
