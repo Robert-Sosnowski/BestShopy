@@ -1,0 +1,27 @@
+.btn {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  padding: 16px 65px;
+  border-radius: $btnRadius;
+  border: none;
+
+
+  &--primary {
+    background-color: $primaryColor;
+    border-radius: $btnRadius;
+    box-shadow: 3px 10px 14px $primaryShadowColor;
+  }
+
+  &--redish {
+    background-color: $colorRedish;
+  }
+
+  &--green {
+    background-color: $colorGreen;
+  }
+
+  &--large {
+    padding: 22px 155px;
+  }
+}
