@@ -1,0 +1,86 @@
+@use "sass:math";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// xs - max-width: 575px,
+// sm - min-width: 576px,
+// md - min-width: 768px,
+// lg - min-width: 992px,
+// xl - min-width: 1200px,
+// hd - min-width: 1600px.
+
+[class*="col"] {
+  width: 100%;
+}
+
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @for $i from 1 through $columns {
+      .col-#{$i} {
+        width: math.div(100%, $columns) * $i;
+        min-height: 1px;
+        padding: 0 math.div($gutter, 2);
+      }
+    }
+
+    @for $i from 1 through $columns {
+      .col-sm-#{$i} {
+        @media screen and (min-width: 576px) {
+          width: math.div(100%, $columns) * $i;
+          min-height: 1px;
+          padding: 0 math.div($gutter, 2);
+        }
+      }
+    }
+
+    @for $i from 1 through $columns {
+      .col-sm-#{$i} {
+        @media screen and (min-width: 576px) {
+          width: math.div(100%, $columns) * $i;
+          min-height: 1px;
+          padding: 0 math.div($gutter, 2);
+        }
+      }
+    }
+
+    @for $i from 1 through $columns {
+      .col-md-#{$i} {
+        @media screen and (min-width: 768px) {
+          width: math.div(100%, $columns) * $i;
+          min-height: 1px;
+          padding: 0 math.div($gutter, 2);
+        }
+      }
+    }
+
+    @for $i from 1 through $columns {
+      .col-lg-#{$i} {
+        @media screen and (min-width: 992px) {
+          width: math.div(100%, $columns) * $i;
+          min-height: 1px;
+          padding: 0 math.div($gutter, 2);
+        }
+      }
+    }
+
+    @for $i from 1 through $columns {
+      .col-xl-#{$i} {
+        @media screen and (min-width: 1200px) {
+          width: math.div(100%, $columns) * $i;
+          min-height: 1px;
+          padding: 0 math.div($gutter, 2);
+        }
+      }
+    }
+  }
+}
