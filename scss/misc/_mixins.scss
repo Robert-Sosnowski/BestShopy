@@ -1,5 +1,3 @@
-@use "sass:math";
-
 
 // xs - max-width: 575px,
 // sm - min-width: 576px,
@@ -8,17 +6,22 @@
 // xl - min-width: 1200px,
 // hd - min-width: 1600px.
 @mixin sm(){
-  @media (min-width: 576px){
+  @media (max-width: 576px){
+    @content
+  }
+}
+@mixin md(){
+  @media (max-width: 768px){
     @content
   }
 }
 @mixin lg(){
-  @media (min-width: 992px){
+  @media (max-width: 992px){
     @content
   }
 }
 @mixin xl(){
-  @media (min-width: 1200px){
+  @media (max-width: 1200px){
     @content
   }
 }

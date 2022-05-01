@@ -1,7 +1,7 @@
 .header {
   height: 70px;
   box-shadow: $primaryShadowColor;
-  border:5px solid deeppink;
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@
   &__nav {
     display: flex;
 
-    @include sm {
+    @include md {
       position: absolute;
       left: 0;
       top: 95px;
@@ -66,7 +66,7 @@
       left: -9999px;
       opacity: 0;
 
-      @include sm {
+      @include md {
         &:checked {
           ~ .header__nav {
             display: flex;
@@ -77,9 +77,11 @@
               &:nth-child(1) {
                 transform: rotate(45deg) translate(2px, 5px);
               }
+
               &:nth-child(2) {
                 opacity: 0;
               }
+
               &:nth-child(3) {
                 transform: rotate(-45deg) translate(2px, -5px);
               }
@@ -105,9 +107,10 @@
         }
       }
 
-      @include sm {
+      @include md {
         display: block;
       }
     }
   }
 }
+
