@@ -1,0 +1,64 @@
+.contact {
+  padding: 80px 100px 100px;
+  display: flex;
+  justify-content: center;
+
+  @include md() {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 15px;
+  }
+
+  &__column {
+    width: 50%;
+
+    @include  md() {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 3.0625rem;
+    line-height: 3.6875rem;
+  }
+
+  &__instruction {
+    margin: 22px 0 42px;
+    font-size: 1rem;
+    line-height: 1.375rem;
+
+    @include md() {
+      margin: 5px 0 35px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: flex-start;
+    color: $colorGray;
+    align-items: center;
+
+    @include md() {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .details__item {
+      color: $colorGray;
+      font-weight: 500;
+      text-decoration: none;
+
+      @include md() {
+        margin-bottom: 10px;
+      }
+
+      &:first-of-type {
+        margin-right: 20px;
+      }
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
