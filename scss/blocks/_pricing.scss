@@ -56,42 +56,79 @@
         }
       }
     }
-    &--professional{
-      --accent-color:#{$primaryColor};
+
+    &--professional {
+      --accent-color: #{$primaryColor};
       width: 400px;
       margin: 0 40px;
       box-shadow: 5px 1px 27px $primaryShadowColor;
-      @include xl(){
+      @include xl() {
         max-width: 400px;
         width: 100%;
-        margin:0 0 50px 0;
+        margin: 0 0 50px 0;
       }
-      .pricing{
-        &__type{
+
+      .pricing {
+        &__type {
           font-size: 1.3125rem;
         }
-        &__item{
+
+        &__item {
           margin-bottom: 25px;
         }
       }
     }
-    &--premium{
-      --accent-color:#{$colorGreen}
+
+    &--premium {
+      --accent-color: #{$colorGreen}
     }
   }
-  &__details{
+
+  &__details {
     margin-top: 34px;
     margin-bottom: 60px;
     text-align: center;
-    @include xl(){
+    @include xl() {
       width: 50%;
-      margin:0;
+      margin: 0;
     }
   }
-  &__type{
+
+  &__type {
     font-size: 1.2rem;
     font-family: $fontRaleway;
     font-weight: 700;
+  }
+
+  &__price {
+    font-size: 2.9rem;
+    font-family: $fontOpenSans;
+    font-weight: 300;
+    margin-top: 25px;
+    color: var(--accent-color);
+  }
+
+  &__item {
+    font-size: 14px;
+    margin-bottom: 20px;
+    @include xl() {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      margin-right: 10px;
+      background-image: url("../assets/Checkmark-1.svg");
+    }
+
+    &--not::before {
+      background-image: url("../assets/Close.svg");
+    }
   }
 
 }
